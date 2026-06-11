@@ -1,0 +1,48 @@
+##
+## EPITECH PROJECT, 2026
+## Lunar Lander Q-Learning
+## File description:
+## config
+##
+
+env:
+  name: "LunarLander-v3"
+
+video:
+  enabled: true
+  render_mode: "rgb_array"
+  folder: "videos"
+
+training:
+  episodes: 50000
+  save_every: 1000
+  solved_reward: 200
+
+q_learning:
+  learning_rate: 0.1
+  discount_factor: 0.99
+
+epsilon:
+  start: 1.0
+  min: 0.01
+  decay: 0.9995
+
+discretization:
+  bins: [8, 8, 8, 8, 8, 8, 2, 2]
+
+  lower_bounds:
+    [-0.1, -0.2, -0.2, -0.2,
+     -0.2, -0.2, 0.0, 0.0]
+
+  upper_bounds:
+    [0.1, 0.2, 0.2, 0.2,
+     0.2, 0.2, 1.0, 1.0]
+
+evaluation:
+  episodes: 5
+
+model:
+  path: "models/lunarlander.pkl"
+
+plots:
+  training_curve: "plots/lunarlander_training.png"

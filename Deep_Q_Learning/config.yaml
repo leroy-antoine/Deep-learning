@@ -1,0 +1,36 @@
+##
+## EPITECH PROJECT, 2026
+## START_TREK
+## File description:
+## main
+##
+
+env:
+  name: "LunarLander-v3"
+  render_mode: "rgb_array"
+  video_folder: "Deep_Q_Learning/dql_lunar_lander_videos/eval"
+
+agent:
+  gamma: 0.99
+  tau: 0.001
+  lr: 0.0005
+
+memory:
+  buffer_size: 100000
+  batch_size: 64
+
+epsilon:
+  start: 1.0
+  min: 0.01
+  decay: 0.999
+
+training:
+  n_episodes: 10000
+  max_t: 10000
+  update_every: 4
+
+eval:
+  n_episodes: 100
+
+checkpoint:
+  path: "Deep_Q_Learning/dql.pth"

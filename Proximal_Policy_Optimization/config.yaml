@@ -1,0 +1,31 @@
+##
+## EPITECH PROJECT, 2026
+## START_TREK
+## File description:
+## main
+##
+
+env:
+  name: "LunarLander-v3"
+  wind: true
+  wind_power: 15.0
+  turbulence_power: 1.5
+  render_mode: 'rgb_array'
+  video_folder: 'ppo_lunar_lander_videos/eval'
+
+agent:
+  gamma: 0.99
+  gae_lambda: 0.95
+  policy_clip: 0.1
+  fc1_dims: 256
+  fc2_dims: 256
+
+train:
+  N: 2048
+  batch_size: 64
+  n_epochs: 5
+  alpha: 0.00003
+  n_train: 300
+
+eval:
+  n_episodes: 100

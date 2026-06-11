@@ -1,0 +1,8 @@
+gymnasium[classic-control]
+gymnasium[box2d]
+gymnasium[other]
+torch
+numpy
+matplotlib
+pandas
+pyyaml
